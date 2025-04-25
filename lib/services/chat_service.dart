@@ -141,7 +141,8 @@ class ChatService {
       final response = await http.Response.fromStream(streamedResponse);
 
       if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
+        final String responseBody = utf8.decode(response.bodyBytes);
+        final data = jsonDecode(responseBody);
         return ChatMessage(
           text: data['response'],
           isUser: false,

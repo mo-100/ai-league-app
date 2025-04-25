@@ -43,7 +43,6 @@ class MessageBubble extends StatelessWidget {
     final bool hasText = message.text.trim().isNotEmpty;
     final bool hasImage = message.image != null;
     final bool hasAudio = message.audio != null; // Check for audio
-    final bool isOnlyAudio = hasAudio && !hasText && !hasImage;
 
     return Padding(
       padding: message.isUser

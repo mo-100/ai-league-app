@@ -65,10 +65,15 @@ class _AudioButtonState extends State<AudioButton>
         // Get temp directory
         final dir = await getTemporaryDirectory();
         final filePath =
-            '${dir.path}/audio_recording_${DateTime.now().millisecondsSinceEpoch}.m4a';
+            '${dir.path}/audio_recording_${DateTime.now().millisecondsSinceEpoch}.wav';
 
         // Start recording
-        await _audioRecorder.start(RecordConfig(), path: filePath);
+        await _audioRecorder.start(RecordConfig(
+          encoder: AudioEncoder.wav,
+          sampleRate: 44100,
+          numChannels: 2,
+          bitRate: 128000,
+        ), path: filePath);
 
         setState(() {
           _isRecording = true;

@@ -22,7 +22,6 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
   Duration? _position;
 
   bool get _isPlaying => _playerState == PlayerState.playing;
-  bool get _isPaused => _playerState == PlayerState.paused;
   // bool get _isStopped => _playerState == PlayerState.stopped; // Use if needed
   // bool get _isCompleted => _playerState == PlayerState.completed; // Use if needed
 

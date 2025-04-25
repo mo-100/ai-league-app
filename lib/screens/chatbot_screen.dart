@@ -23,7 +23,7 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
   bool _isReporting = false;
   File? _selectedImageFile;
   final ChatService _chatService = ChatService(
-    baseUrl: 'http://192.168.0.101:8000',
+    baseUrl: 'http://192.168.4.113:8000',
   );
   final List<ChatMessage> _messages = [
     ChatMessage(
@@ -105,6 +105,10 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
 
     // Get and process the bot's reply
     final botMessage = await _chatService.sendAudioMessage(file);
+    // final trancsribedText = await speechToText(file);
+    // print(trancsribedText);
+    // print('\n\n\n');
+    // final botMessage = await _chatService.sendPreorderMessage(trancsribedText);
     setState(() {
       _messages.add(botMessage);
     });
