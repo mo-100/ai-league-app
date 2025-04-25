@@ -21,10 +21,8 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   void setPosition() async {
-    print('setting location11');
     Position place = await Geolocator.getCurrentPosition();
     setState(() {
-      print('setting location');
       p = place;
     });
   }

@@ -59,7 +59,6 @@ class _AudioButtonState extends State<AudioButton>
   }
 
   Future<void> _startRecording() async {
-    print('object');
     try {
       if (await _audioRecorder.hasPermission()) {
         // Get temp directory
