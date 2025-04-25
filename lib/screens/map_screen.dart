@@ -71,7 +71,7 @@ class _MapScreenState extends State<MapScreen> {
               child: TextField(
                 controller: _searchController,
                 decoration: InputDecoration(
-                  hintText: 'Bathroom',
+                  hintText: 'Al awal park',
                   prefixIcon: const Icon(Icons.search, color: Colors.grey),
                   border: InputBorder.none,
                   contentPadding: const EdgeInsets.symmetric(

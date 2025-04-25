@@ -23,7 +23,7 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
   bool _isReporting = false;
   File? _selectedImageFile;
   final ChatService _chatService = ChatService(
-    baseUrl: 'http://192.168.4.113:8000',
+    baseUrl: 'http://172.20.10.7:8000',
   );
   final List<ChatMessage> _messages = [
     ChatMessage(

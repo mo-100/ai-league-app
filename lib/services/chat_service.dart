@@ -7,7 +7,7 @@ import '../models/chat_message.dart';
 
 class ChatService {
   final String baseUrl;
-  final Duration timeout = const Duration(seconds: 10);
+  final Duration timeout = const Duration(seconds: 20);
 
   ChatService({required this.baseUrl});
 
